@@ -4,8 +4,6 @@ train: images/train
 val: images/val
 test: images/test
 
-
-
 # Classes
 names:
   0: Apical Periodontitis
@@ -30,7 +28,3 @@ names:
   19: Impacted tooth
   20: Denture Metal
   21: Metallic Attachment
-
-
-
-
