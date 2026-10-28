@@ -1,30 +1,5 @@
 # Dental Detection
 
-基于 Ultralytics RT-DETR 的口腔影像目标检测项目，可识别根尖周炎、龋齿、智齿、缺失牙、种植体等 22 类口腔疾病与修复体。
-
-> 本项目仅用于科研与算法实验，不能替代专业医生的临床诊断。
-
-## 项目特点
-
-- 基于 RT-DETR ResNet-50 构建检测模型
-- 支持训练、验证、预测和断点续训
-- 提供 22 类口腔目标的数据集配置
-- 仓库包含基线实验结果与训练权重
-
-## 环境要求
-
-- Python 3.8 或更高版本
-- PyTorch 1.8 或更高版本
-- 推荐使用支持 CUDA 的 NVIDIA GPU
-
-## 安装
-
-```bash
-git clone https://github.com/zhangbei11/Dental_detection_22.git
-cd Dental_detection_22
-pip install -e .
-```
-
 ## 数据集准备
 
 数据集建议采用以下目录结构：
@@ -140,17 +115,3 @@ results = model.predict(source="/path/to/image.jpg", imgsz=640, save=True)
 | 20 | Denture Metal | 金属义齿 |
 | 21 | Metallic Attachment | 金属附件 |
 
-## 项目结构
-
-```text
-Dental_detection_22/
-├── train.py                              # 训练入口
-├── pyproject.toml                        # 项目依赖和构建配置
-├── ultralytics/                          # 模型与训练框架源码
-│   └── cfg/datasets/tooth_oral22.yaml    # 22 类口腔数据集配置
-└── runs/train-22/1027-baseline/          # 基线实验结果与权重
-```
-
-## 许可证
-
-本项目基于 Ultralytics，使用 [AGPL-3.0](LICENSE) 许可证。
